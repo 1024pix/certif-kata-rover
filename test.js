@@ -1,6 +1,13 @@
 const { expect } = require('chai');
 const chai = require('chai');
 
+// compass
+//
+//     North
+// West  <->  East
+//     South
+
+
 // A test list :
 // - starting (1, 1) facing east, got forward,          ending in (2,1) facing east
 // - starting (1, 1) facing east, got forward-forward,  ending in (3,1) facing east
