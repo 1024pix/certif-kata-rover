@@ -7,6 +7,14 @@ const chai = require('chai');
 // West  <->  East
 //     South
 
+// referential
+//
+// y 
+// ^
+// |
+// |
+// 0 ----> x
+
 
 // A test list :
 // - starting (1, 1) facing east, got forward,          ending in (2,1) facing east
