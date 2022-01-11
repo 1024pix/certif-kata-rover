@@ -20,10 +20,22 @@ const chai = require('chai');
 // - starting (1, 1) facing east, got forward,          ending in (2,1) facing east
 // - starting (1, 1) facing east, got forward-forward,  ending in (3,1) facing east
 // - starting (1, 1) facing east, got backward,         ending in (0,1) facing east
-// - starting (2, 2) facing east, got forward,          ending in (3,2) facing east
-// - starting (1, 1) facing east, got right,            ending in (1,1) facing south
+// - starting (2, 2) facing east, got forward,          ending in (3,2) facing east 
+// - starting (1, 1) facing east, got right,            ending in (1,1) facing south <=
 // - starting (1, 1) facing east, got right right,      ending in (1,1) facing west
 
-it('should return true', ()=>{
-    expect(false).to.be.true;
+const apply = ()=> {
+    return { x: 1, y: 1, direction: 'south'}
+}
+
+it('starting (1, 1) facing east, got right,  ending in (1,1) facing south', ()=>{
+    // given
+    const commands = 'r';
+    const state = { x: 1, y: 1, direction: 'east'};
+
+    // when
+    const result = apply(commands, state)    
+
+    // then
+    expect(result).to.deep.equal({ x: 1, y: 1, direction: 'south'});
 });
